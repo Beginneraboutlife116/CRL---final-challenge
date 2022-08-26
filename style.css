@@ -5,6 +5,20 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:where(:active, :link, :visited, :checked, :focus-visible, :focus-within) {
+  text-decoration: none;
+  color: inherit;
+}
+
 :where(:root) {
   --clr-1: #2e323f;
   --clr-2: #3b4050;
@@ -22,21 +36,10 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
 }
 
-img {
-  max-width: 100%;
-}
-
 p {
   font-family: "Montserrat", sans-serif;
-}
-
-a:where(:active, :link, :visited, :checked, :focus-visible, :focus-within) {
-  text-decoration: none;
-  color: inherit;
 }
