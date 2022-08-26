@@ -19,6 +19,16 @@ a:where(:active, :link, :visited, :checked, :focus-visible, :focus-within) {
   color: inherit;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* base setting */
 :where(:root) {
   --clr-1: #2e323f;
   --clr-2: #3b4050;
@@ -43,3 +53,89 @@ body {
 p {
   font-family: "Montserrat", sans-serif;
 }
+
+button {
+  background-color: transparent;
+  color: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* utility class name */
+.container {
+  width: min(100% - 2rem, 75rem);
+  margin-inline: auto;
+}
+
+.full-bg {
+  box-shadow: 0 0 0 100vmax var(--bg-clr);
+  clip-path: inset(0 -100vmax);
+}
+
+/* header */
+.header {
+  --bg-clr: var(--clr-1);
+
+  background-color: var(--clr-1);
+  color: var(--clr-4);
+  padding-block: 1rem;
+  font-size: var(--fz-2);
+}
+
+.nav {
+  display: flex;
+  gap: 0.25rem 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  gap: 1rem;
+}
+
+/* button */
+.buttons {
+  display: flex;
+  gap: .5rem;
+}
+
+.btn {
+  font-size: inherit;
+}
+
+.btn_action {
+  background-color: var(--clr-5);
+  border-radius: 99em;
+  padding: .25em .75em;
+  color: var(--clr-4);
+}
+
+/* img */
+.img-wrapper > a {
+  display: flex;
+  width: fit-content  ;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+/* @media (min-width: 500px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+} */
