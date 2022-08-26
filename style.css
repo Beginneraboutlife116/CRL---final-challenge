@@ -1,0 +1,42 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:where(:root) {
+  --clr-1: #2e323f;
+  --clr-2: #3b4050;
+  --clr-3: #6f737f;
+  --clr-4: #fff;
+  --clr-5: #a59678;
+
+  --fz-1: 1rem;
+  --fz-2: 1.125rem;
+  --fz-3: 1.3125rem;
+  --fz-4: 1.5rem;
+  --fz-5: 1.875rem;
+  --fz-6: 2rem;
+  --fz-7: 5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+a:where(:active, :link, :visited, :checked, :focus-visible, :focus-within) {
+  text-decoration: none;
+  color: inherit;
+}
