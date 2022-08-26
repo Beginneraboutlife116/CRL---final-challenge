@@ -35,6 +35,7 @@ li {
   --clr-3: #6f737f;
   --clr-4: #fff;
   --clr-5: #a59678;
+  --clr-6: #fff2f2;
 
   --fz-1: 1rem;
   --fz-2: 1.125rem;
@@ -123,6 +124,31 @@ button {
   font-size: clamp(var(--fz-2), calc(0.95rem + 0.73vw), var(--fz-4));
 }
 
+/* main */
+.point-list {
+  --bg-clr: var(--clr-6);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 1.5rem;
+  padding-block: calc(5vmin + 1rem);
+}
+
+.point {
+  text-align: center;
+  flex: 0 1 18rem;
+}
+
+.point__title {
+  font-size: clamp(var(--fz-4), calc(1.33rem + 0.73vw), var(--fz-5));;
+  color: var(--clr-5);
+}
+
+.point__content {
+  font-size: clamp(var(--fz-1), calc(0.94rem + 0.24vw), var(--fz-2));
+}
+
 /* button */
 .buttons {
   display: flex;
@@ -146,10 +172,16 @@ button {
 }
 
 /* media query */
-/* @media (min-width: 500px) {
+@media (min-width: 500px) {
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-} */
+}
+
+@media (min-width: 1000px) {
+  .point-list {
+    justify-content: space-between;
+  }
+}
