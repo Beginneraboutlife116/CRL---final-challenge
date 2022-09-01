@@ -19,7 +19,7 @@ a:where(:active, :link, :visited, :checked, :focus-visible, :focus-within) {
   color: inherit;
 }
 
-ul {
+ul, h1, h2, h3 {
   padding: 0;
   margin: 0;
 }
@@ -43,7 +43,8 @@ li {
   --fz-4: 1.5rem;
   --fz-5: 1.875rem;
   --fz-6: 2rem;
-  --fz-7: 5.625rem;
+  --fz-7: 2.25rem;
+  --fz-8: 5.625rem;
 }
 
 body {
@@ -111,8 +112,7 @@ button {
 }
 
 .cta__title {
-  margin: 0;
-  font-size: clamp(2.5rem, calc(1.08rem + 6.06vw), var(--fz-7));
+  font-size: clamp(2.5rem, calc(1.08rem + 6.06vw), var(--fz-8));
   line-height: 1.2;
 }
 
@@ -131,12 +131,11 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0 1.5rem;
+  gap: 1.5rem;
   padding-block: calc(5vmin + 1rem);
 }
 
 .point {
-  text-align: center;
   flex: 0 1 18rem;
 }
 
@@ -146,6 +145,37 @@ button {
 }
 
 .point__content {
+  font-size: clamp(var(--fz-1), calc(0.94rem + 0.24vw), var(--fz-2));
+}
+
+.content {
+  padding-block: calc(12vmin + 1rem);
+  padding-inline: 1rem;
+  font-size: clamp(var(--fz-1), calc(0.86rem + 0.61vw), var(--fz-3));
+}
+
+.content__title {
+  font-size: clamp(var(--fz-5), calc(1.70rem + 0.73vw), var(--fz-7));
+  color: var(--clr-5);
+}
+
+.list {
+  display: grid;
+  gap: 2rem;
+}
+
+.item {
+  padding: 1.25rem;
+  text-align: center;
+  background-color: var(--clr-2);
+  color: var(--clr-4);
+}
+
+.item__title {
+  font-size: clamp(var(--fz-5), calc(1.70rem + 0.73vw), var(--fz-7));
+}
+
+.item__text {
   font-size: clamp(var(--fz-1), calc(0.94rem + 0.24vw), var(--fz-2));
 }
 
@@ -182,6 +212,7 @@ button {
 
 @media (min-width: 1000px) {
   .point-list {
+    text-align: center;
     justify-content: space-between;
   }
 }
