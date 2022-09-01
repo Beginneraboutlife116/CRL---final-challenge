@@ -191,11 +191,12 @@ button {
 .footer__content {
   display: grid;
   gap: 2rem;
+  justify-items: end;
 }
 
 .footer__title {
   color: var(--clr-4);
-  font-size: clamp(var(--fz-5), calc(1.70rem + 0.73vw), var(--fz-7));
+  font-size: clamp(var(--fz-5), calc(1.36rem + 2.18vw), 3.00rem);
   margin-block-end: calc(5vmin + 1rem);
 }
 
@@ -204,6 +205,7 @@ button {
 }
 
 .footer__section h3 {
+  font-size: clamp(var(--fz-1), calc(0.86rem + 0.61vw), var(--fz-3));
   color: var(--clr-5);
   margin-block-end: clamp(var(--fz-1), calc(0.55rem + 1.94vw), var(--fz-6));
 }
@@ -246,6 +248,9 @@ button {
     justify-content: space-between;
     align-items: center;
   }
+  .footer__content {
+    grid-template-columns: repeat(2 ,1fr);
+  }
 }
 
 @media (min-width: 1000px) {
@@ -258,5 +263,9 @@ button {
     grid-template-columns: 2fr 1fr;
     gap: 20vmin;
     padding-inline: 0;
+  }
+  .footer__content {
+    text-align: left;
+    grid-template-columns: 2fr repeat(3, 1fr);
   }
 }
