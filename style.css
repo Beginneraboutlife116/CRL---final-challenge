@@ -239,7 +239,7 @@ button {
 /* button */
 .buttons {
   display: flex;
-  gap: 0.5rem;
+  gap: clamp(0.5em, calc(-0.4rem + 3.84vw), 2em);
 }
 
 .btn {
