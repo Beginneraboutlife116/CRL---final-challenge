@@ -35,7 +35,7 @@ li {
   --clr-3: #6f737f;
   --clr-4: #fff;
   --clr-5: #a59678;
-  --clr-6: #fff2f2;
+  --clr-6: rgba(0, 0, 0, 0.05);
 
   --fz-1: 1rem;
   --fz-2: 1.125rem;
@@ -132,7 +132,7 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  padding-block: calc(5vmin + 1rem);
+  padding-block: calc(10vmin + 1rem);
 }
 
 .point {
@@ -149,7 +149,7 @@ button {
 }
 
 .content {
-  padding-block: calc(12vmin + 1rem);
+  padding-block: calc(15vmin + 1rem);
   padding-inline: 1rem;
   font-size: clamp(var(--fz-1), calc(0.86rem + 0.61vw), var(--fz-3));
 }
@@ -162,6 +162,7 @@ button {
 .list {
   display: grid;
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, (43.75rem - 4rem) / 3), 1fr));
 }
 
 .item {
@@ -214,5 +215,11 @@ button {
   .point-list {
     text-align: center;
     justify-content: space-between;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20vmin;
+    padding-inline: 0;
   }
 }
