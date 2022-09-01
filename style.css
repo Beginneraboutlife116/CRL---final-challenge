@@ -108,12 +108,13 @@ button {
   display: grid;
   gap: 1rem;
   color: var(--clr-4);
-  padding-block: calc(10vmin + 2rem);
+  padding-block-start: calc(10vmin + 2rem);
+  padding-block-end: calc(10vmin + 5rem);
 }
 
 .cta__title {
   font-size: clamp(2.5rem, calc(1.08rem + 6.06vw), var(--fz-8));
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .cta__title > span {
@@ -122,6 +123,7 @@ button {
 
 .cta__content {
   font-size: clamp(var(--fz-2), calc(0.95rem + 0.73vw), var(--fz-4));
+  align-self: end;
 }
 
 /* main */
@@ -254,6 +256,9 @@ button {
 }
 
 @media (min-width: 1000px) {
+  .cta {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .point-list {
     text-align: center;
     justify-content: space-between;
