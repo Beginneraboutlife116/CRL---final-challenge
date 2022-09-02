@@ -176,7 +176,7 @@ button {
   gap: 2rem;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(100%, (43.75rem - 4rem) / 3), 1fr)
+    minmax(min(100%, (43.75rem - 10rem) / 3), 1fr)
   );
   margin-block-start: 4rem;
 }
@@ -263,7 +263,7 @@ button {
 }
 
 /* media query */
-@media (min-width: 500px) {
+@media (min-width: 31.25em) {
   .header {
     display: flex;
     justify-content: space-between;
@@ -277,7 +277,7 @@ button {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
   .cta {
     grid-template-columns: repeat(2, 1fr);
   }
